@@ -5,7 +5,7 @@
 }
 
 
-.card {
+/* .card {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
@@ -13,6 +13,17 @@
     gap: 30px;
     padding: 30px;
     max-width: 1400px;
+    margin: auto;
+} */
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    max-width: 400px;
     margin: auto;
 }
 
@@ -25,15 +36,16 @@
 }
 
 .currencies-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 5px;
     align-items: center;
     padding: 20px;
+    justify-content: center;
 }
 
 .card-header {
-  background: rgb(104, 81, 81);
+  background-image: linear-gradient(90deg, rgb(104, 81, 81), rgb(112, 40, 40));
   color: white;
   text-align: center;
   padding: 30px 0px;
@@ -41,10 +53,43 @@
 }
 
 .currencies {
-    padding: 5px 10px;
+    padding: 5px 8px;
     font-size: 14px;
     border-radius: 5px;
-    background: rgb(110, 107, 107);
+    background-image: linear-gradient(90deg, rgb(110, 107, 107), rgb(94, 72, 72));
     color: aliceblue;
-    grid-row: 2/3;
 }
+
+@media (min-width: 681px) and (max-width: 960px) {
+    .card {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        max-width: 800px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 961px) and (max-width: 1200px) {
+    .card {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1000px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1201px) {
+    .card {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        max-width: 1300px;
+        margin: auto;
+    }
+}
+

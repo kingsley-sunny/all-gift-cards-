@@ -1,6 +1,7 @@
 import "./App.css";
 
-function App() {
+function App(props) {
+  console.log(props);
   const allGiftCards = [
     {
       id: "1",
@@ -602,7 +603,7 @@ function App() {
   return (
     <div className="card">
       {allGiftCards.map((card) => (
-        <div className="card-item">
+        <div className="card-item" key={`${card.id}`}>
           <div className="card-header">
             <h2>{card.title}</h2>
           </div>
